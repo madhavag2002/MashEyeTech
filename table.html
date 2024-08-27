@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collapsible Table with Sidebar</title>
+    <link rel="stylesheet" href="table.css">
+</head>
+<body>
+    
+
+    <!-- Main Content -->
+    <div class="content">
+        <h1>Collapsible Table with Pagination and Search</h1>
+        <input type="text" id="searchInput" placeholder="Search desserts..." onkeyup="searchTable()">
+        
+        <div class="table-container">
+            <table id="collapsibleTable">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>VID</th>
+                        <th class="right">Start time</th>
+                        <th class="right">End time</th>
+                        <th class="right">Incidents</th>
+                        <th class="right">Protein (g)</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <!-- Table Rows will be inserted here by JavaScript -->
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- Pagination Controls -->
+        <div class="pagination">
+            <button id="prevPage" onclick="prevPage()">Previous</button>
+            <span id="pageInfo"></span>
+            <button id="nextPage" onclick="nextPage()">Next</button>
+        </div>
+    </div>
+
+    <script src="table.js"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicles</title>
+    <link rel="stylesheet" href="sidebarstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="table.css">
+    <link rel="stylesheet" href="vehicles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="topbarstyle.css">
+</head>
+<body>
+    <div class="vehicles">
+        <div class="sidebar">
+            <a href="#"><i class="fa fa-dashboard"></i> Dashboard</a>
+            <a href="#"><i class="fa fa-user"></i> Users</a> 
+            <a href="#"><i class="fa fa-drivers-license-o"></i> Drivers</a>
+            <a href="#"><i class="fa fa-truck"></i> Vehicles</a> 
+          <!-- Alerts dropdown menu -->
+           <div class="dropdown">
+               <a href="#"><i class="fa fa-bell"></i> Alerts</a> 
+               <div class="dropdown-content">
+                   <a1 href="#">Safety Alerts</a1>
+                   <a1 href="#">Panic Alerts</a1>
+                   <a1 href="#">Other Alerts</a1>
+               </div>
+           </div>
+            <a href="#"><i class='fa fa-globe'></i> Live View</a> 
+            <a href="#"> Map View</a>
+            <a href="#"> Trips </a> 
+            <a href="#"> Control Room</a>
+            <a href="#"><i class='fa fa-exclamation-circle'></i> Accidents</a>
+       </div>
+       <div class="top">
+        <div class="topnav-right">
+            <a href="#"><i class="fa fa-user" style= " padding-right: 10px;"></i></a>
+            <a href="#" ><i class="fa fa-gear" style=" padding-right: 10px;"></i></a>
+           
+            <a href="#">
+                <span class="glyphicon glyphicon-log-out"></span>
+            </a>
+        </div>
+    </div>
+    <div class="table-container">
+        <input type="text" id="searchInput" placeholder="Search desserts..." onkeyup="searchTable()">
+        
+        <table id="collapsibleTable">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Dessert (100g serving)</th>
+              <th class="right">Calories</th>
+              <th class="right">Fat (g)</th>
+              <th class="right">Carbs (g)</th>
+              <th class="right">Protein (g)</th>
+            </tr>
+          </thead>
+          <tbody id="tableBody">
+            <!-- Rows will be dynamically inserted here -->
+          </tbody>
+        </table>
+        
+        <div class="pagination">
+          <button onclick="prevPage()">Previous</button>
+          <span id="pageInfo"></span>
+          <button onclick="nextPage()">Next</button>
+        </div>
+      </div>
+    
+      <script src="table.js"></script>
+</div>
+</body>
+</html>
